@@ -1,0 +1,21 @@
+.Smoke {
+  color: #FFF;
+  height: 100vh;
+  background: #000;
+  h1 {
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .link-text{
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 4rem;
+    background: grey;
+    a {
+      color: #fff;
+    }
+  }
+}

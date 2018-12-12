@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: inherit;
+}
+
+body {
+  font-size: 1.4rem;
+  color: #333;
+  background-color: #fff;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.flexCenterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 4rem;
+}
+
+.text {
+  &-again {
+    color: blue;
+    font-size: 2rem;
+  }
+  &-danger {
+    font-size: 2rem;
+    color: red;
+  }
+}

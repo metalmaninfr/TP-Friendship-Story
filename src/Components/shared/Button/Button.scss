@@ -1,0 +1,23 @@
+@import "../../../styles/styles.scss";
+
+.link {
+  @include link;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 70%;
+  background: grey;
+  border: .1rem solid darkgrey;
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  & p {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../styles/styles.scss";
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  color: #fff;
+  .title {
+    margin-top: 5rem;
+    font-size: 2rem;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.circle {
+	height: 20rem;
+	width: 20rem;
+  background-image: url('../../assets/la-fontaine.jpeg');
+  border: 3px solid green;
+  border-radius: 50%;
+}
