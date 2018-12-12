@@ -1,5 +1,5 @@
 import React from 'react';
-// import Button from '../shared/Button/Button';
+import Button from '../shared/Button/Button';
 import './Game.scss';
 
 const Game = (props) => (
@@ -27,7 +27,7 @@ const Game = (props) => (
     :
       <div className="flexCenterRow">
         <p className="text-again" onClick={props.refill}>Try again ?</p>
-        <p className="text-danger">Give up ?</p>
+        <Button extraClassName="text-danger" text="Give up ?" url="/choose-transport" />
       </div>
     }
     <footer className="footer">

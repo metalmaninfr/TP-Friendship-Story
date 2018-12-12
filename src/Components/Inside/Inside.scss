@@ -13,4 +13,22 @@
   .title {
     margin-bottom: 1rem;
   }
+  .swipe-container {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  .swipe {
+    animation: swipe 2s linear;
+    animation-iteration-count: 4;
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes swipe {
+  from {
+    margin-right: -10rem;
+  }
+  to {
+    margin-right: 5rem;
+  }
 }

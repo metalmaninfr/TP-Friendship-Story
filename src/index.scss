@@ -36,5 +36,8 @@ body {
   &-danger {
     font-size: 2rem;
     color: red;
+    a {
+      color: red; 
+    }
   }
 }
