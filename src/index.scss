@@ -16,9 +16,7 @@ body {
   font-size: 1.4rem;
   color: #333;
   background-color: #fff;
-  @media (min-width: 768px) {
-    font-size: 1.6rem;
-  }
+  line-height: 1.5;
 }
 
 .flexCenterRow {
@@ -36,8 +34,9 @@ body {
   &-danger {
     font-size: 2rem;
     color: red;
+    text-decoration: none;
     a {
-      color: red; 
+      color: red;
     }
   }
 }

@@ -14,8 +14,9 @@ const Transport = (props) => (
       </div>
     :
       <div className="Transport">
-        <div>
-          <h2>You need to go home</h2>
+        <div style={{ textAlign: 'center' }}>
+          <h2>{`${props.winner ? 'David' : 'You' } must pay the bill`}</h2>
+          <h2>You need to find a way home</h2>
         </div>
         <div className="transportation-container">
           <h3>choose your transportation</h3>

@@ -17,12 +17,14 @@ class GameContainer extends Component {
   componentDidMount() {
     const beerContent = document.querySelectorAll('.beer-content');
     const drink = () => {
-      if (this.state.amountBis >= 0) {
-      this.setState({ amountBis: this.state.amountBis - 10 })
-      beerContent[1].style.height = `${this.state.amountBis}%`;
-      }
-      if (this.state.amountBis === 0) {
-        this.setState({ amountBis: 110, enemieDrank: this.state.enemieDrank + 1 })
+      if (this.state.enemieDrank < 14) {
+        if (this.state.amountBis >= 0) {
+        this.setState({ amountBis: this.state.amountBis - 10 })
+        beerContent[1].style.height = `${this.state.amountBis}%`;
+        }
+        if (this.state.amountBis === 0) {
+          this.setState({ amountBis: 110, enemieDrank: this.state.enemieDrank + 1 })
+        }
       }
     }
     setInterval(drink, 300);

@@ -8,6 +8,7 @@ class TransportContainer extends Component {
       uber: false,
       taxi: false,
     };
+    console.log(this.state.winner);
   }
 
   handUber = () => {
@@ -27,6 +28,7 @@ class TransportContainer extends Component {
           choiceTaxi={() => this.handTaxi()}
           taxi={this.state.taxi}
           uber={this.state.uber}
+          winner={this.props.location.state.winner}
         />
       </div>
     );

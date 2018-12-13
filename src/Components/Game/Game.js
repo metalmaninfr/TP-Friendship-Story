@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../shared/Button/Button';
+import { Link } from 'react-router-dom';
 import './Game.scss';
 
 const Game = (props) => (
@@ -23,7 +23,17 @@ const Game = (props) => (
     {props.amount >= 0 ?
       <div>
         {props.enemieGiveUp ?
-        <Button extraClassName="btnCircle btnCircleLink" text="Drink" url='/choose-transport' />
+        <Link
+          className="btnCircle btnCircleLink"
+          to={{
+            pathname: '/choose-transport',
+            state: {
+              winner: true,
+            }
+          }}
+        >
+          Drink
+        </Link>
         :
         <button className="btnCircle" onClick={props.drink}>Drink</button>
         }
@@ -31,7 +41,17 @@ const Game = (props) => (
     :
       <div className="flexCenterRow">
         <p className="text-again" onClick={props.refill}>Try again ?</p>
-        <Button extraClassName="text-danger" text="Give up ?" url="/choose-transport" />
+        <Link
+          className="text-danger"
+          to={{
+            pathname: '/choose-transport',
+            state: {
+              winner: false,
+            }
+          }}
+        >
+          Give up ?
+        </Link>
       </div>
     }
     <footer className="footer">
