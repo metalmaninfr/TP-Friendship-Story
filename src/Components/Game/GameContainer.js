@@ -10,6 +10,7 @@ class GameContainer extends Component {
       amountBis: 100,
       pintsDrank: 0,
       enemieDrank: 0,
+      enemieGiveUp: false,
     };
   }
 
@@ -35,6 +36,9 @@ class GameContainer extends Component {
     if (this.state.amount === 0) {
       this.setState({ pintsDrank: this.state.pintsDrank + 1 });
     }
+    if (this.state.enemieDrank < 8 && this.state.pintsDrank > 8) {
+      this.setState({ enemieGiveUp: true });
+    }
     beerContent[0].style.height = `${this.state.amount}%`;
   }
 
@@ -54,6 +58,7 @@ class GameContainer extends Component {
             pints={this.state.pintsDrank}
             amount={this.state.amount}
             enemieScore={this.state.enemieDrank}
+            enemieGiveUp={this.state.enemieGiveUp}
           />
         :
         <PassOut />

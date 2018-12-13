@@ -22,7 +22,11 @@ const Game = (props) => (
     </div>
     {props.amount >= 0 ?
       <div>
+        {props.enemieGiveUp ?
+        <Button extraClassName="btnCircle btnCircleLink" text="Drink" url='/choose-transport' />
+        :
         <button className="btnCircle" onClick={props.drink}>Drink</button>
+        }
       </div>
     :
       <div className="flexCenterRow">
@@ -32,7 +36,7 @@ const Game = (props) => (
     }
     <footer className="footer">
       <div className="footer-items">
-        <p>enemie pints drank</p>
+        <p>david pints drank</p>
         <p>{props.enemieScore}</p>
       </div>
       <div className="footer-items">
