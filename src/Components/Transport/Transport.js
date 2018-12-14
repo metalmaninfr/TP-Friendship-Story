@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Transport.scss';
 import Button from '../shared/Button/Button'
 import image1 from '../../assets/taxi.jpg';
@@ -35,5 +36,16 @@ const Transport = (props) => (
   </div>
 );
 
+Transport.propTypes = {
+  taxi: PropTypes.bool.isRequired,
+  uber: PropTypes.bool.isRequired,
+  choiceTaxi: PropTypes.func.isRequired,
+  choiceUber: PropTypes.func.isRequired,
+  winner: PropTypes.bool,
+};
+
+Transport.defaulProps = {
+  winner: true,
+};
 
 export default Transport

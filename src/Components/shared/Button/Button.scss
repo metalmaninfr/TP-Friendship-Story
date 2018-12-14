@@ -6,8 +6,8 @@
 
 .button {
   display: flex;
-  justify-content: center;
   align-items: center;
+  text-align: center;
   height: 3rem;
   width: 70%;
   background: grey;
@@ -16,7 +16,6 @@
   margin: 0 auto;
   margin-bottom: 1rem;
   & p {
-    height: 100%;
     width: 100%;
     color: #fff;
   }

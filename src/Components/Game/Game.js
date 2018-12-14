@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Game.scss';
 
@@ -56,15 +57,24 @@ const Game = (props) => (
     }
     <footer className="footer">
       <div className="footer-items">
-        <p>david pints drank</p>
-        <p>{props.enemieScore}</p>
-      </div>
-      <div className="footer-items">
         <p>number of pints drank</p>
         <p>{props.pints}</p>
+      </div>
+      <div className="footer-items">
+        <p>david pints drank</p>
+        <p>{props.enemieScore}</p>
       </div>
     </footer>
   </div>
 );
+
+Game.propTypes = {
+  amount: PropTypes.number.isRequired, 
+  pints: PropTypes.number.isRequired,
+  enemieScore: PropTypes.number.isRequired,
+  enemieGiveUp: PropTypes.bool.isRequired,
+  drink: PropTypes.func.isRequired,
+  refill: PropTypes.func.isRequired,
+};
 
 export default Game

@@ -8,12 +8,10 @@ class TransportContainer extends Component {
       uber: false,
       taxi: false,
     };
-    console.log(this.state.winner);
   }
 
   handUber = () => {
     this.setState({ uber: !this.state.uber });
-    console.log(this.state.uber);
   }
   handTaxi = () => {
     this.setState({ taxi: !this.state.taxi });

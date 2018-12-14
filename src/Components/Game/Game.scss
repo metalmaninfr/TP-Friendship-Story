@@ -93,7 +93,7 @@
     text-align: center;
     &-text::after {
       content: '"You lost you must pay the bill"';
-      animation: 30s ease changeTextWithFade;
+      animation: 25s linear changeTextWithFade;
     }
   }
 }
@@ -129,9 +129,6 @@
     opacity: 1;
   }
 }
-
-
-
 
 .blur {
   filter: blur(.2rem);
